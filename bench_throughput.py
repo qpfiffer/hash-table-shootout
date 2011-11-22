@@ -8,6 +8,7 @@ programs = [
     'qt_qhash',
 ]
 
+# sample_interval should divide max_keys or you might miss the last observation
 max_keys  = 1500*1000*1000
 sample_interval = 1*1000*1000
 warmup_runs = 4
