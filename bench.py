@@ -13,7 +13,7 @@ programs = [
 # for the final run, use this:
 minkeys  =  0*1000*1000
 maxkeys  = 1500*1000*1000
-interval =100*1000*1000
+interval = 100*1000*1000
 best_out_of = 3
 # and use nice/ionice
 # and shut down to the console
@@ -24,7 +24,7 @@ outfile = open('output', 'w')
 if len(sys.argv) > 1:
     benchtypes = sys.argv[1:]
 else:
-    benchtypes = ('random')
+    benchtypes = ('random', )
 
 for benchtype in benchtypes:
     nkeys = minkeys
