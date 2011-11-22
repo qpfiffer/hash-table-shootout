@@ -53,6 +53,8 @@ To run the throughput benchmark:
 
 The results can be found in `output_throughput`. I just used R to make my own charts. I might add a similar utility to generate charts like Nick's.
 
+You can use the same `nice`/`ionice` command line as above to run it at highest priority, but replace `bench.py` with `bench_throughput.py`, naturally.
+
 Copyright Information
 =====================
 
