@@ -8,19 +8,13 @@ programs = [
     'google_dense_hash_map',
     'qt_qhash',
     'python_dict',
-    'ruby_hash',
 ]
 
-minkeys  =  2*1000*1000
-maxkeys  = 40*1000*1000
-interval =  2*1000*1000
-best_out_of = 2
-
 # for the final run, use this:
-#minkeys  =  2*1000*1000
-#maxkeys  = 40*1000*1000
-#interval =  2*1000*1000
-#best_out_of = 3
+minkeys  =  0*1000*1000
+maxkeys  = 1500*1000*1000
+interval =100*1000*1000
+best_out_of = 3
 # and use nice/ionice
 # and shut down to the console
 # and swapoff any swap files/partitions
@@ -30,7 +24,7 @@ outfile = open('output', 'w')
 if len(sys.argv) > 1:
     benchtypes = sys.argv[1:]
 else:
-    benchtypes = ('sequential', 'random', 'delete', 'sequentialstring', 'randomstring', 'deletestring')
+    benchtypes = ('random')
 
 for benchtype in benchtypes:
     nkeys = minkeys
