@@ -44,7 +44,11 @@ allocate too much memory.)
 
 Copyright Information
 =====================
+
 Modified by Timon Karnezos in 2011.
+
 Originally written by Nick Welch in 2010.
+
 No copyright.  This work is dedicated to the public domain.
+
 For full details, see http://creativecommons.org/publicdomain/zero/1.0/
