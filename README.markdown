@@ -1,7 +1,7 @@
 How to run these benchmarks
 ===========================
 
-I ran this on an Amazon EC2 m2.4xlarge instance with the Red Hat 6.1 x86_64 AMI (ami-31d41658).
+I ran this on an Amazon EC2 `m2.4xlarge` instance with the Red Hat 6.1 x86\_64 AMI (`ami-31d41658`).
 
 Setup:
 ------
@@ -22,6 +22,8 @@ Setup:
 To run:
 -------
 
+Nick's original benchmark with higher key count and restricted to just random integer inserts:
+
     $ cd hash-table-shootout
     $ mkdir build
     $ make
@@ -41,6 +43,15 @@ To run the benchmark at the highest priority possible, do this:
 You might also want to disable any swap files/partitions so that swapping
 doesn't influence performance.  (The programs will just die if they try to
 allocate too much memory.)
+
+To run the throughput benchmark:
+
+    $ cd hash-table-shootout
+    $ mkdir build_throughput
+    $ make -f MakefileThroughput
+    $ python bench_throughput.py
+
+The results can be found in `output_throughput`. I just used R to make my own charts. I might add a similar utility to generate charts like Nick's.
 
 Copyright Information
 =====================
