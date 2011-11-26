@@ -42,7 +42,7 @@ To run the benchmark at the highest priority possible, do this:
 
 since I'm running this as `root` on EC2, it's simply:
 
-    $ nice -n-20 ionice -c1 -n0 pythong bench.py
+    $ nice -n-20 ionice -c1 -n0 python bench.py
 
 You might also want to disable any swap files/partitions so that swapping
 doesn't influence performance.  (The programs will just die if they try to
