@@ -55,7 +55,7 @@ To run the throughput benchmark:
     $ make -f MakefileThroughput
     $ python bench_throughput.py
 
-The results can be found in `output_throughput`. I just used R to make my own charts. I might add a similar utility to generate charts like Nick's.
+The results can be found in `output_throughput`. I just hacked up my own charts, but I might add a similar utility to generate charts like Nick's.
 
 You can use the same `nice`/`ionice` command line as above to run it at highest priority, but replace `bench.py` with `bench_throughput.py`, naturally.
 
