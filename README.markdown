@@ -33,8 +33,8 @@ Nick's original benchmark with higher key count and restricted to just random in
 Your charts are now in charts.html.
 
 You can tweak some of the values in bench.py to make it run faster at the
-expense of less granular data, and you might need to tweak some of the tickSize
-settings in charts-template.html.
+expense of less granular data, and you might need to tweak some of the `tickSize`
+settings in `charts-template.html`.
 
 To run the benchmark at the highest priority possible, do this:
 
