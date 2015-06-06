@@ -8,6 +8,7 @@ programs = [
     'google_dense_hash_map',
     'qt_qhash',
     'python_dict',
+    'simple_sparsehash'
 ]
 
 # for the final run, use this:

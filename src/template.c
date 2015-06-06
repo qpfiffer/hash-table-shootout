@@ -60,8 +60,11 @@ int main(int argc, char ** argv)
 
     else if(!strcmp(argv[2], "sequentialstring"))
     {
-        for(i = 0; i < num_keys; i++)
-            INSERT_STR_INTO_HASH(new_string_from_integer(i), value);
+        for(i = 0; i < num_keys; i++) {
+            char *key = new_string_from_integer(i);
+            INSERT_STR_INTO_HASH(key, value);
+            free(key);
+        }
     }
 
     else if(!strcmp(argv[2], "randomstring"))
@@ -71,6 +74,7 @@ int main(int argc, char ** argv)
             INSERT_STR_INTO_HASH(new_string_from_integer((int)random()), value);
     }
 
+    /*
     else if(!strcmp(argv[2], "deletestring"))
     {
         for(i = 0; i < num_keys; i++)
@@ -79,6 +83,7 @@ int main(int argc, char ** argv)
         for(i = 0; i < num_keys; i++)
             DELETE_STR_FROM_HASH(new_string_from_integer(i));
     }
+    */
 
     double after = get_time();
     printf("%f\n", after-before);
