@@ -16,10 +16,10 @@ build/google_dense_hash_map: src/google_dense_hash_map.cc Makefile src/template.
 	g++ -O2 -lm src/google_dense_hash_map.cc -o build/google_dense_hash_map
 
 build/qt_qhash: src/qt_qhash.cc Makefile src/template.c
-	g++ -O2 -lm `pkg-config --cflags --libs QtCore` src/qt_qhash.cc -o build/qt_qhash
+	g++ -O2 `pkg-config --cflags --libs QtCore` src/qt_qhash.cc -o build/qt_qhash -lm `pkg-config --cflags --libs QtCore`
 
 build/simple_sparsehash: src/simple_sparsehash.c Makefile template.c
 	gcc -O2 src/simple_sparsehash.c -o build/simple_sparsehash
 
 build/python_dict: src/python_dict.c Makefile src/template.c
-	gcc -O2 -lm -I/usr/include/python2.7 -lpython2.7 src/python_dict.c -o build/python_dict
+	gcc -O2 -I/usr/include/python2.7 src/python_dict.c -o build/python_dict -lpython2.7 -lm

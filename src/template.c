@@ -47,6 +47,7 @@ int main(int argc, char ** argv)
             INSERT_INT_INTO_HASH((int)random(), value);
     }
 
+    /*
     else if(!strcmp(argv[2], "delete"))
     {
         for(i = 0; i < num_keys; i++)
@@ -55,6 +56,7 @@ int main(int argc, char ** argv)
         for(i = 0; i < num_keys; i++)
             DELETE_INT_FROM_HASH(i);
     }
+    */
 
     else if(!strcmp(argv[2], "sequentialstring"))
     {
