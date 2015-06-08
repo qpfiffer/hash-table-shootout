@@ -8,14 +8,30 @@ programs = [
     'google_dense_hash_map',
     'qt_qhash',
     'python_dict',
+<<<<<<< HEAD
     'simple_sparsehash'
+=======
+    'ruby_hash',
+>>>>>>> parent of 19110fc... Modify for 1.5B run of just random integers.
 ]
 
-# for the final run, use this:
 minkeys  =  2*1000*1000
 maxkeys  = 40*1000*1000
 interval =  2*1000*1000
 best_out_of = 2
+
+# for the final run, use this:
+<<<<<<< HEAD
+minkeys  =  2*1000*1000
+maxkeys  = 40*1000*1000
+interval =  2*1000*1000
+best_out_of = 2
+=======
+#minkeys  =  2*1000*1000
+#maxkeys  = 40*1000*1000
+#interval =  2*1000*1000
+#best_out_of = 3
+>>>>>>> parent of 19110fc... Modify for 1.5B run of just random integers.
 # and use nice/ionice
 # and shut down to the console
 # and swapoff any swap files/partitions
@@ -25,7 +41,11 @@ outfile = open('output', 'w')
 if len(sys.argv) > 1:
     benchtypes = sys.argv[1:]
 else:
+<<<<<<< HEAD
     benchtypes = ('sequential', )
+=======
+    benchtypes = ('sequential', 'random', 'delete', 'sequentialstring', 'randomstring', 'deletestring')
+>>>>>>> parent of 19110fc... Modify for 1.5B run of just random integers.
 
 for benchtype in benchtypes:
     nkeys = minkeys
