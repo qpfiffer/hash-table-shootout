@@ -45,6 +45,7 @@ proper_names = {
     'glib_hash_table': 'Glib 2.22 GHashTable',
     'qt_qhash': 'Qt 4.5 QHash',
     'python_dict': 'Python 2.6 (C API) dict',
+    'simple_sparsehash': 'Simple Sparsehash 0.1',
     'ruby_hash': 'Ruby 1.9 (C API) Hash',
 }
 
@@ -59,6 +60,7 @@ program_slugs = [
     'ruby_hash',
     'glib_hash_table',
     'qt_qhash',
+    'simple_sparsehash',
 ]
 
 chart_data = {}
